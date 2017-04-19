@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript"></script>
+<script src="./Scripts/jquery-1.10.2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./style/site.css">
+
+	<TITLE>JavaScript</TITLE>
+</head>
+<body>
+
+<div>	
+<button id="btn1">jQuery</button>
+	<script type="text/javascript">
+		$(function(){
+			$("#btn1").click(function(){
+				$(this).css('background-color', 'red');
+				alert('World jQuery');
+				});
+			
+			});
+		
+	</script>
+
+	<script type="text/javascript">
+		$(function(){
+			$("#btn2").click(function(){
+				$(".cl1").css({'height:200px','width:200px', 'background-color:black'});
+			});
+		});
+	</script>
+
+	<!--ѕри загрузке старницы делает что-то. »спользуем documebt(DOM) 
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+			$('#btn3').css('background-color','green');
+				alert('ASP.NET the best :-)');
+		});	
+	</script>
+	-->
+<div>
+	<ul class="menu">
+		<li><a href="menu">ћеню1</a></li>
+		<li><a href="#">ћеню2</a>
+		<ul class="submenu"> 
+			<li>1</li>
+			<li>2</li>
+		</ul>
+		</li>
+		<li><a href="#">ћеню3</a></li>
+	</ul>
+</div>
+<div class="main">
+
+	<table id="table_citis" style="border-spacing:0px">
+		<th>ID</th>
+		<th>NAME</th>
+		<tr>
+			<td>1</td>
+			<td>Kharkov</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Kiev</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Lvov</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Lvov</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>Lvov</td>
+		</tr>
+	</table>
+
+	<script type="text/javascript">
+		$(function(){
+			$('#table_citis th').css({ "background":"#4d4d4d", "color":"#fff", "border":"1px solid #fff"});
+			$('#table_citis tr:even').css({ "background":"grey"});
+			$('#table_citis tr:odd').css({ "background":"#e6e6e6"});
+			$('#table_citis td').css({ "border":"1px solid #fff"});
+		});
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			var a = $('.menu li').map(function(index, elem){
+				return $(elem).children()[0];
+			});
+
+			a.each(function(endex, elem){
+				 console.log(elem.innerHTML);
+			});
+			a.css('background-color', 'silver');
+		});
+	</script>
+
+
+
+</div>
+
+<button id="btn2">—менить стиль</button>
+<button id="btn3">—менить стиль еще раз</button>
+<script type="text/javascript">
+	$(function(){
+		$("#btn2").click(function(){
+				$(".testClass").toggleClass("testClass1");
+			});
+		
+	});
+</script>
+
+<script type="text/javascript">
+	$(function(){
+		$("#btn3").click(function(){
+				$(".testClass").toggleClass("testClass3");
+
+			});
+		
+	});
+</script>
+
+<div class="testClass">
+	
+</div>
+
+<div>
+	<input type=ФtextФ id=ФidentificatorФ value=ФButtonФ> 
+</div>
+
+</div>	
+</body>
+
+</html>
